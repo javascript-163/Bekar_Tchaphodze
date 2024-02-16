@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text File Reader</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        #text-box {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="file-input">
+    <button onclick="loadFile()">Load</button>
+    <div>
+        <p>Total Symbols: <span id="total-symbols"></span></p>
+        <p>Total Words: <span id="total-words"></span></p>
+        <p>Longest Word: <span id="longest-word"></span></p>
+        <p>Shortest Word: <span id="shortest-word"></span></p>
+        <p>Average Word Length: <span id="average-length"></span></p>
+    </div>
+    <textarea id="text-box"></textarea>
+
+    <script>
+        function loadFile() {
+            let file = document.getElementById('file-input').files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = function (e) {
+                let text = e.target.result;
+
+                let symbols = text.length;
+                let words = text.match(/\S+/g)?.length || 0;
+                let wordArray = text.match(/\b\w+\b/g) || [];
+                let totalWordLength = wordArray.reduce((sum, word) => sum + word.length, 0);
+                let averageLength = (words > 0) ? totalWordLength / words : 0; // Avoid division by zero
+
+                let longestWord = wordArray.reduce((longest, current) => longest.length >= current.length ? longest : current, '');
+                let shortestWord = wordArray.reduce((shortest, current) => shortest.length <= current.length ? shortest : current, wordArray[0]);
+
+                document.getElementById('text-box').value = text;
+                document.getElementById('total-symbols').textContent = symbols;
+                document.getElementById('total-words').textContent = words;
+                document.getElementById('longest-word').textContent = longestWord;
+                document.getElementById('shortest-word').textContent = shortestWord;
+                document.getElementById('average-length').textContent = averageLength.toFixed(2);
+            };
+
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+
+</html>
