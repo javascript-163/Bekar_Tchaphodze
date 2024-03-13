@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploader</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #preview {
+            display: none;
+            max-width: 1024px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload a File</h2>
+    <input type="file" id="file-input">
+    <div id="preview"></div>
+
+    <script>
+        document.getElementById('file-input').addEventListener('change', function() {
+            const fileInput = this;
+            const preview = document.getElementById('preview');
+
+            if (fileInput.files && fileInput.files[0]) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    const fileContent = e.target.result;
+
+                    if (file.type.startsWith('image/')) {
+                        preview.innerHTML = `<img src="${fileContent}" id="preview-image">`;
+                        preview.style.display = 'block';
+                    } else if (file.type.startsWith('video/')) {
+                        preview.innerHTML = `<video controls id="preview-video"><source src="${fileContent}" type="${file.type}"></video>`;
+                        preview.style.display = 'block';
+                    } else if (file.type.startsWith('text/')) {
+                        preview.textContent = fileContent;
+                        preview.style.display = 'block';
+                    } else {
+                        alert('Unsupported file format!');
+                    }
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
