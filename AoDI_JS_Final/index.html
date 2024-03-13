@@ -1,11 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guitar Center</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laptop.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7627b0a584.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 </head>
+
 <body>
-    
+    <div class="container">
+
+        <!-- header -->
+
+        <header>
+            <button id="menu_button"><i class="fa-solid fa-bars"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <a id="logo" href="index.html"><img src="images/guitar.svg" alt="Guitar logo"></a>
+            <div id="header_buttons">
+                <button id="search_button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="user_button"><i class="fa-regular fa-user"></i></button>
+                <button id="cart_button"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </header>
+
+        <!-- section 1 -->
+
+        <section id="banner">
+            <div id="banner_link">
+                <h2>
+                    NEW
+                    <span>COLLECTION</span>
+                </h2>
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- section 2 -->
+
+        <section id="section_2">
+            <div id="grid_container">
+                <div id="grid_box_1"><h3>Classical Guitar</h3></div>
+                <div id="grid_box_2"><h3>Acoustic Guitar</h3></div>
+                <div id="grid_box_3"><h3>Electric Guitar</h3></div>
+                <div id="grid_box_4"><h3>Base Guitar</h3></div>
+            </div>
+        </section>
+
+        <!-- section 3 -->
+
+        <section id="section_3">
+            <h3>Most Popular</h3>
+            <div id="card_box">
+                <article class="card">
+                    <img src="images/card_guitar.png" alt="guitar">
+                    <div class="card_content">
+                        <h4>Lorem Ipsum</h4>
+                        <div class="card_bottom">
+                            <div>
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                4 reviews
+                            </div>
+                            $ 950
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/card_guitar.png" alt="guitar">
+                    <div class="card_content">
+                        <h4>Lorem Ipsum</h4>
+                        <div class="card_bottom">
+                            <div>
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                4 reviews
+                            </div>
+                            $ 950
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/card_guitar.png" alt="guitar">
+                    <div class="card_content">
+                        <h4>Lorem Ipsum</h4>
+                        <div class="card_bottom">
+                            <div>
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                4 reviews
+                            </div>
+                            $ 950
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/card_guitar.png" alt="guitar">
+                    <div class="card_content">
+                        <h4>Lorem Ipsum</h4>
+                        <div class="card_bottom">
+                            <div>
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                <img src="images/star.svg" alt="star icon">
+                                4 reviews
+                            </div>
+                            $ 950
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- section 4 -->
+
+        <section id="section_4">
+            <h2>JOIN OUR MAILING LIST</h2>
+            <form id="subscribe_box" name="subscribe">
+                <input type="email" name="sub" placeholder="E-mail address">
+                <button>SUBSCRIBE</button>
+            </form>
+        </section>
+
+        <!-- footer -->
+
+        <footer>
+            <div>
+                <div class="footer_div">
+                    
+                    <h4><span>Brands</span></h4>
+                    <span>Fender</span>
+                    <span>Gibson</span>
+                    <span>Jockson</span>
+                    <span>Ibanez</span>
+                </div>
+                <div class="footer_div">
+                    <h4><span>Information</span></h4>
+                    <span>Blog</span>
+                    <span>Delivery</span>
+                    <span>About us</span>
+                </div>
+                <div class="footer_div">
+                    <h4><span>Contact</span></h4>
+                    <a href="https://maps.app.goo.gl/h1kW2tHmQn8x5BjY7" target="blank">Tbilisi, Rustaveli st. 24</a>
+                    <a href="tel:+995322567898">+(32)2 56 78 98</a>
+                    <div>
+                        <a href="https://www.facebook.com/" target="blank"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.whatsapp.com" target="blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+                        <a href="https://www.instagram.com" target="blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <span>©All rights reserved. 2025.</span>
+        </footer>
+    </div>
 </body>
+
 </html>

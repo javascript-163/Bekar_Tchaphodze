@@ -1,0 +1,211 @@
+/* 320-768 */
+
+/* კრიტერიუმებში წერია 320px-მდე უნდა მუშაობდეს რესპონსივიო, მაგრამ დიზაინები 375px-ზეა მოცემული მობილურზე და ნაკლებზე იგივე დიზაინით ვერ გადავა მარტივად, ამიტომ 375-ის ქვემოთ აღარ შემიმოწმებია როგორ მუშაობს. */
+
+@media (max-width: 540px) {
+    header {
+        padding: 0 8px;
+    }
+
+    #logo>img {
+        height: 40px;
+        width: 40px;
+    }
+
+    #header_buttons {
+        column-gap: 16px;
+    }
+
+    #header_buttons>button {
+        height: 32px;
+        width: 32px;
+    }
+
+    #search_button {
+        font-size: 20px;
+    }
+
+    #user_button {
+        font-size: 15px;
+    }
+
+    #cart_button {
+        font-size: 15px;
+    }
+
+    /* section 1 */
+
+    #banner {
+        height: 400px;
+    }
+
+    #banner_link {
+        margin-top: 32px;
+    }
+
+    #banner_link>h2 {
+        font-size: 24px;
+    }
+
+    /* section 2 */
+
+    #section_2 {
+        height: 400px;
+    }
+
+    #grid_container {
+        grid-template-rows: repeat(2, 160px);
+    }
+
+    #grid_container>div>h3 {
+        font-size: 16px;
+    }
+
+    /* section 3 */
+
+    #section_3 {
+        height: 544px;
+        padding: 32px 0 32px 8px;
+    }
+
+    #section_3>h3 {
+        font-size: 24px;
+    }
+
+    /* section 4 */
+
+    #section_4 {
+        height: 168px;
+    }
+
+    #section_4>h2 {
+        font-size: 24px;
+    }
+
+    #subscribe_box>input {
+        width: 200px;
+    }
+
+    /* footer */
+
+    footer {
+        height: auto;
+        padding: 32px 0;
+    }
+
+    footer>div {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .footer_div {
+        align-items: center;
+    }
+}
+
+@media (max-width: 650px) {
+    /* catalog */
+
+    #catalog_top>button {
+        height: 40px;
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    #catalog_list_top_left>span {
+        display: none;
+    }
+
+    #catalog_list_top_right>button {
+        width: fit-content;
+    }
+
+    #catalog_list_top_right>button>span {
+        display: none;
+    }
+
+    #catalog_bottom {
+        padding: 32px 0;
+    }
+
+    #catalog_bottom_inner {
+        width: 343px;
+    }
+
+    .catalog_card {
+        width: 343px;
+    }
+
+    .catalog_card>img {
+        width: 100%;
+        height: 298px;
+    }
+
+    #catalog_list_bottom>button {
+        padding: 8px 14px;
+    }
+
+    #catalog_list_bottom>button>span {
+        display: none;
+    }
+
+    /* contact */
+
+    #contact {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 0;
+    }
+
+    #contact_inner {
+        width: 290px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact_inner>h3 {
+        font-size: 16px;
+    }
+
+    #contact_1 {
+        width: 290px;
+        height: auto;
+    }
+
+    #contact_1>a {
+        display: none;
+    }
+
+    #contact_1>div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 24px;
+    }
+
+    #contact_1>div>a {
+        font-size: 24px;
+    }
+
+    #contact_1>div>a:last-child {
+        display: inline-block;
+    }
+
+    #contact_1>div>a>span {
+        display: none;
+    }
+
+    #contact_2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    #map {
+        align-items: center;
+    }
+}
