@@ -11,7 +11,11 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
+    min-height: 100vh;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* header */
@@ -120,8 +124,9 @@ nav li:hover a {
     position: absolute;
     top: 100%;
     right: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
+    align-items: center;
     row-gap: 8px;
     color: #FFF;
     background-color: #000;
@@ -129,10 +134,12 @@ nav li:hover a {
     border: 1px solid #CCC;
 }
 
-#auth_links a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: #333;
+#auth_links > a {
+    color: #6464FF;
+}
+
+#msg_logged_in {
+    display: none;
 }
 
 /* section 1 */
@@ -363,13 +370,12 @@ nav li:hover a {
 
 footer {
     width: 100%;
-    height: 380px;
+    height: 200px;
     background-color: #2C4246;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    row-gap: 64px;
+    justify-content: space-around;
 }
 
 footer>div {
@@ -735,4 +741,89 @@ button:hover {
 button:active {
     border-radius: 8px;
     box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 1), inset -3px -3px 3px rgba(255, 255, 255, 0.6);
+}
+
+
+/* sign in page */
+
+#sign_in_form_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    color: #FFF;
+}
+
+#signin_form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#signin_form input[type="email"],
+#signin_form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+#signin_form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #05BCCA;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#signin_form button:hover {
+    background-color: #007a8a;
+}
+
+
+/* register page */
+
+#register_form_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    color: #FFF;
+}
+
+#register_form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#register_form input[type="email"],
+#register_form input[type="password"],
+#register_form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+#register_form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #05BCCA;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#register_form button:hover {
+    background-color: #007a8a;
 }
