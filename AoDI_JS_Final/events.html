@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Center</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laptop.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7627b0a584.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- header -->
+
+        <header>
+            <button id="menu_button"><i class="fa-solid fa-bars"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                </ul>
+            </nav>
+            <a id="logo" href="index.html"><img src="images/guitar.svg" alt="Guitar logo"></a>
+            <div id="header_buttons">
+                <button id="search_button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="user_button"><i class="fa-regular fa-user"></i></button>
+                <button id="cart_button"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            <div id="user_menu">
+                <span id="greeting_message">Hi there, stranger.</span>
+                <div id="auth_links">
+                    <a href="signin.html">Sign In</a>
+                    /
+                    <a href="register.html">Register</a>
+                </div>
+                <span id="msg_logged_in">You are logged in.</span>
+            </div>
+        </header>
+
+        <!-- section -->
+
+        <div id="widget_outer">
+            <div id="widget_inner_left">
+                <input type="text" id="autocomplete" placeholder="Type a country">
+
+                <ul id="autocomplete-list"></ul>
+            </div>
+
+            <div id="widget_inner_right">
+                <div class="event"></div>
+                <div class="event"></div>
+                <div class="event"></div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <footer>
+            <div>
+                <div class="footer_div">
+
+                    <h4><span>Brands</span></h4>
+                    <span>Fender</span>
+                    <span>Gibson</span>
+                    <span>Jockson</span>
+                    <span>Ibanez</span>
+                </div>
+                <div class="footer_div">
+                    <h4><span>Information</span></h4>
+                    <span>Blog</span>
+                    <span>Delivery</span>
+                    <span>About us</span>
+                </div>
+                <div class="footer_div">
+                    <h4><span>Contact</span></h4>
+                    <a href="https://maps.app.goo.gl/h1kW2tHmQn8x5BjY7" target="blank">Tbilisi, Rustaveli st. 24</a>
+                    <a href="tel:+995322567898">+(32)2 56 78 98</a>
+                    <div>
+                        <a href="https://www.facebook.com/" target="blank"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.whatsapp.com" target="blank"><i
+                                class="fa-brands fa-square-whatsapp"></i></a>
+                        <a href="https://www.instagram.com" target="blank"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <span>©All rights reserved. 2025.</span>
+        </footer>
+    </div>
+</body>
+
+</html>
