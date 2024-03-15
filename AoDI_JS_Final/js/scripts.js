@@ -73,10 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(apiUrl)
           .then(response => response.json())
           .then(data => {
-            // Clear previous event data
             widgetInnerRight.innerHTML = '';
 
-            // Iterate over each event and create HTML elements
             data.events.forEach(event => {
               const eventDiv = document.createElement('div');
               eventDiv.classList.add('event');
@@ -98,8 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
               eventLink.href = event.url;
               eventLink.target = '_blank';
               eventDiv.appendChild(eventLink);
-
-              // Append the event div to the widgetInnerRight div
+              
               widgetInnerRight.appendChild(eventDiv);
             });
           })
